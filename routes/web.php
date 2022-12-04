@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TODOListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', static function () {
-    return view('index');
-});
+Route::get('/', [TODOListController::class, 'index']);
