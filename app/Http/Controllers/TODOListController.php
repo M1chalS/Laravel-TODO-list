@@ -26,4 +26,11 @@ class TODOListController extends Controller
         return redirect()->back()->with("message", "Successfully added");
     }
 
+    public function delete(TODOList $list) : RedirectResponse {
+
+        $list->delete();
+
+        return redirect()->back()->with("message", "Successfully deleted");
+    }
+
 }
